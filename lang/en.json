@@ -1,0 +1,97 @@
+{
+  "dict": {
+    "navCall": "Call now",
+    "navCar": "Car",
+    "navGallery": "Gallery",
+    "heroEyebrow": "Jalandhar, Punjab",
+    "heroTitle": "On the road<br>since 2012.",
+    "heroTag": "Airport runs, outstation trips, and city drives across Punjab — driven by someone who knows every shortcut.",
+    "driverPhotoCaption": "Parmjeet Choudhary · Suzuki Ertiga",
+    "plateLabel": "Registration",
+    "languagesLabel": "Languages",
+    "languagesVal": "Hindi · Punjabi · English",
+    "hoursLabel": "Hours",
+    "licenseLabel": "License",
+    "licenseVal": "Verified",
+    "aboutHeading1": "A driver who knows Punjab's roads like his own street.",
+    "aboutPara1": "Twelve years of driving across the state — from early-morning airport pickups to late-night highway runs. Every trip is planned around your schedule, not the other way around.",
+    "statYearsLabel": "years driving",
+    "statRatingLabel": "average rating",
+    "statLangLabel": "languages spoken",
+    "aboutHeading2": "Why riders choose this cab.",
+    "aboutPara2": "No surprises, no detours. Just a clean car, a fair fare quoted upfront, and a driver who's on time.",
+    "statZeroLabel": "hidden charges",
+    "statACLabel": "always on",
+    "statGPSLabel": "tracked routes",
+    "servicesHeading": "Services",
+    "servicesSub": "Book for a single trip or a full day — whatever the journey calls for.",
+    "svc1Title": "Airport transfers",
+    "svc1Desc": "Pickups and drop-offs at Sri Guru Ram Dass Jee (ATQ) Amritsar and Chandigarh airports, timed to your flight.",
+    "svc2Title": "Outstation trips",
+    "svc2Desc": "One-way or round trips to Amritsar, Chandigarh, Delhi, Manali, or Dharamshala — with rest stops built into the route.",
+    "svc3Title": "Local sightseeing & gurudwara visits",
+    "svc3Desc": "Half-day or full-day city tours, including temple and gurudwara visits at your own pace.",
+    "svc4Title": "Weddings & events",
+    "svc4Desc": "Decorated car options and multi-day bookings for baraats, receptions, and family functions.",
+    "svc5Title": "Corporate travel",
+    "svc5Desc": "Monthly billing available for offices needing regular staff pickups or client transport.",
+    "routesHeading": "Popular routes",
+    "routesSub": "Fixed fares, no meter surprises. Ask for a quote on any route not listed here.",
+    "route1From": "Chandigarh → Himachal",
+    "route2From": "Chandigarh → Rajasthan",
+    "route3From": "Chandigarh → Delhi (IGI)",
+    "route4From": "Chandigarh → Delhi NCR",
+    "route5From": "Chandigarh → Uttarakhand",
+    "route6From": "Chandigarh → Rajasthan",
+    "route7From": "Delhi → Himachal",
+    "route8From": "Delhi → Rajasthan",
+    "route9From": "Delhi → Chandigarh",
+    "route10From": "Delhi → Uttarakhand",
+    "vehicleHeading": "The vehicle",
+    "vehicleSub": "A Suzuki Ertiga, maintained and sanitized before every trip.",
+    "feat1": "Seats up to 6 passengers comfortably, with luggage space",
+    "feat2": "Air conditioning running the full trip, front and rear",
+    "feat3": "Phone charging points and bottled water provided",
+    "feat4": "Serviced every 5,000 km, insurance up to date",
+    "galleryHeading": "Gallery",
+    "gallerySub": "A look at the car and the road — click any photo to zoom in.",
+    "videoHeading": "On the road",
+    "testiHeading": "What riders say",
+    "footHeading": "Book your ride",
+    "footSub": "Call or message directly — most trips are confirmed within minutes.",
+    "waChat": "WhatsApp chat",
+    "locationText": "Based in Panchkula, Punjab — trips across North India",
+    "hoursText": "Available 24 hours, every day",
+    "footNote": "Replace the phone number, vehicle number, and photos above with your own details before publishing."
+  },
+  "videos": [
+    { 
+      "src": "assets/hill-drive1.mp4", 
+      "caption": "Hill Drive" 
+    },
+    { 
+      "src": "assets/hill-drive2.mp4", 
+      "caption": "EnRoute Scenic Hill Drive" 
+    }
+  ],
+  "testimonials": [
+    {
+      "type": "video",
+      "src": "assets/testimonial.mp4",
+      "who": "",
+      "city": "Airport Drop"
+    },
+    {
+      "type": "video",
+      "src": "assets/testimonial2.mp4",
+      "who": "",
+      "city": "Badrinath Trip"
+    },
+    {
+      "type": "text",
+      "quote": "Best driver for the Manali route. Knows exactly where to stop for food and rest.",
+      "who": "Gaurav Verma",
+      "city": "Chandigarh"
+    }
+  ]
+}
