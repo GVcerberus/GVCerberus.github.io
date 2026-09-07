@@ -323,6 +323,66 @@ body.lang-pa .route-cell .from-to{font-family:'Mukta Mahee', sans-serif;}
   background:var(--maroon);
 }
 
+/* ---------- Fleet slider (multiple vehicles in the car-hero section) ---------- */
+.car-tabs{
+  display:flex; flex-wrap:wrap; gap:10px;
+  margin-bottom:34px;
+}
+.car-tab{
+  padding:9px 18px;
+  border-radius:4px;
+  border:2px solid var(--navy);
+  background:var(--paper);
+  color:var(--navy);
+  font-family:'Rajdhani', sans-serif;
+  font-weight:600;
+  font-size:0.98rem;
+  cursor:pointer;
+  transition:background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+body.lang-hi .car-tab{font-family:'Mukta', sans-serif;}
+body.lang-pa .car-tab{font-family:'Mukta Mahee', sans-serif;}
+.car-tab.active{background:var(--navy); color:var(--paper); border-color:var(--navy);}
+.car-tab:hover:not(.active){border-color:var(--maroon); color:var(--maroon);}
+
+.car-slides{position:relative;}
+.car-slide{display:none;}
+.car-slide.active{display:block; animation:carFadeIn 0.35s ease;}
+@keyframes carFadeIn{
+  from{opacity:0; transform:translateX(14px);}
+  to{opacity:1; transform:translateX(0);}
+}
+@media (prefers-reduced-motion: reduce){ .car-slide.active{animation:none;} }
+
+.car-slider-controls{
+  display:flex; align-items:center; justify-content:center; gap:18px;
+  margin-top:30px;
+}
+.car-nav{
+  width:38px; height:38px;
+  border-radius:50%;
+  border:2px solid var(--navy);
+  background:var(--paper);
+  color:var(--navy);
+  font-size:20px; line-height:1;
+  display:flex; align-items:center; justify-content:center;
+  cursor:pointer; flex-shrink:0;
+  transition:background 0.15s ease, color 0.15s ease;
+}
+.car-nav:hover{background:var(--navy); color:var(--paper);}
+.car-dots{display:flex; align-items:center; gap:8px;}
+.car-dot{
+  width:9px; height:9px; padding:0;
+  border-radius:50%; border:none;
+  background:rgba(26,29,32,0.25);
+  cursor:pointer;
+  transition:width 0.2s ease, border-radius 0.2s ease, background 0.2s ease;
+}
+.car-dot.active{width:26px; border-radius:5px; background:var(--maroon);}
+@media (max-width:640px){
+  .car-tab{padding:8px 14px; font-size:0.9rem;}
+}
+
 /* ---------- Gallery ---------- */
 .gallery{background:var(--paper-dim);}
 .gallery-grid{

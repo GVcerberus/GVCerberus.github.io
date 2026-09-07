@@ -139,4 +139,37 @@ document.addEventListener('DOMContentLoaded', function() {
   document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape') closeLightbox();
   });
+
+  // Fleet slider (Car section: switch between vehicles via tabs, dots, or arrows)
+  function initCarSlider() {
+    var slides = document.querySelectorAll('.car-slide');
+    var tabs = document.querySelectorAll('.car-tab');
+    var dots = document.querySelectorAll('.car-dot');
+    var prevBtn = document.querySelector('[data-car-nav="prev"]');
+    var nextBtn = document.querySelector('[data-car-nav="next"]');
+    if (!slides.length) return;
+
+    var current = 0;
+
+    function show(index) {
+      var total = slides.length;
+      current = ((index % total) + total) % total;
+      slides.forEach(function(el, i) { el.classList.toggle('active', i === current); });
+      tabs.forEach(function(el, i) { el.classList.toggle('active', i === current); });
+      dots.forEach(function(el, i) { el.classList.toggle('active', i === current); });
+    }
+
+    tabs.forEach(function(tab, i) {
+      tab.addEventListener('click', function() { show(i); });
+    });
+    dots.forEach(function(dot, i) {
+      dot.addEventListener('click', function() { show(i); });
+    });
+    if (prevBtn) prevBtn.addEventListener('click', function() { show(current - 1); });
+    if (nextBtn) nextBtn.addEventListener('click', function() { show(current + 1); });
+
+    show(0);
+  }
+
+  initCarSlider();
 });

@@ -20,9 +20,19 @@
 
 <!--
   HOW TO ADD YOUR OWN PHOTOS AND VIDEOS
-  1. Next to this index.html file, create a folder named "assets".
+  1. Next to this index.html file, create a folder named "images".
   2. Add these files inside it (any normal photo works —.webp or png):
-  // Used local videos for now. 
+       driver-with-car.webp   -> shown at the top of the page
+       PHOTO-2026-07-27-11-01-10 2.webp          -> Suzuki Ertiga photo, in "Our fleet" section
+       dzire.webp              -> Suzuki Dzire photo, in "Our fleet" section
+       innova-crysta.webp      -> Innova Crysta photo, in "Our fleet" section
+       tempo-traveller.webp    -> Tempo Traveller photo, in "Our fleet" section
+       gallery-1.webp  gallery-2.webp  gallery-3.webp
+       gallery-4.webp  gallery-5.webp  gallery-6.webp  -> shown in the Gallery photo grid
+     Until a file is added, that spot shows a placeholder box so the page never looks broken.
+  2b. FLEET SLIDER: the "Our fleet" section now shows 4 vehicles in a slider (tabs, arrows, and
+     dots to switch between them). Search this file for "EDIT: FLEET VEHICLES" to add, remove,
+     or edit a vehicle — each one is a tab + a slide, copy an existing pair and change the text.
   3. GALLERY VIDEOS: search this file for "EDIT: GALLERY VIDEOS" (inside the <script> tag near
      the bottom). Each video is one entry in a list — copy an existing one, paste it below, and
      change the YouTube video ID and caption. Add as many as you like; the row grows on its own.
@@ -66,7 +76,7 @@
         <div class="ph-fallback">
           <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><circle cx="12" cy="14" r="3.5"/><path d="M7 7l1.5-3h7L17 7"/></svg>
         </div>
-        <img src="assets/PHOTO-2026-07-27-11-01-18.webp" alt="Paramjit Chaudhary standing with his taxi" loading="eager" onload="imgLoaded(this" onerror="imgFailed(this)">
+        <img src="assets/PHOTO-2026-07-27-11-01-18.webp" alt="Paramjit Chaudhary standing with his taxi" loading="eager" onload="imgLoaded(this)" onerror="imgFailed(this)">
       </div>
       <div class="driver-photo-caption" data-i18n="driverPhotoCaption">Paramjit Chaudhary · Suzuki Ertiga</div>
       <div class="plate-card">
@@ -82,24 +92,118 @@
 </section>
 
 <section class="car-hero" id="car">
-  <div class="wrap car-hero-grid">
-    <div class="car-hero-photo photo-slot">
-      <div class="ph-fallback">
-        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 22h20M6 22V11l6-7 6 7v11M9 22v-6h6v6"/></svg>
-        <span>Add assets/PHOTO-2026-07-27-11-01-10 2.webp</span>
-      </div>
-      <img src="assets/PHOTO-2026-07-27-11-01-10 2.webp" alt="Suzuki Ertiga" loading="lazy" onload="imgLoaded(this)" onerror="imgFailed(this)">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 class="display car-hero-title" data-i18n="fleetHeading">Our fleet</h2>
+      <p data-i18n="fleetSub">Choose the vehicle that fits your trip — from a compact sedan to a full-size traveller.</p>
     </div>
-    <div>
-      <div class="section-head">
-        <h2 class="display car-hero-title" data-i18n="vehicleHeading">The vehicle</h2>
-        <p data-i18n="vehicleSub">A Suzuki Ertiga, maintained and sanitized before every trip.</p>
+
+    <!-- EDIT: FLEET VEHICLES — tabs (one button per vehicle) -->
+    <div class="car-tabs" role="tablist" aria-label="Choose a vehicle">
+      <button class="car-tab active" type="button" data-car-tab="0" data-i18n="carTab0">Suzuki Ertiga</button>
+      <button class="car-tab" type="button" data-car-tab="1" data-i18n="carTab1">Suzuki Dzire</button>
+      <button class="car-tab" type="button" data-car-tab="2" data-i18n="carTab2">Innova Crysta</button>
+      <button class="car-tab" type="button" data-car-tab="3" data-i18n="carTab3">Tempo Traveller</button>
+    </div>
+
+    <!-- EDIT: FLEET VEHICLES — one slide per vehicle, matched to the tabs above -->
+    <div class="car-slides">
+
+      <div class="car-slide active" data-car-slide="0">
+        <div class="car-hero-grid">
+          <div class="car-hero-photo photo-slot">
+            <div class="ph-fallback">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 22h20M6 22V11l6-7 6 7v11M9 22v-6h6v6"/></svg>
+              <span>Add assets/PHOTO-2026-07-27-11-01-10 2.webp</span>
+            </div>
+            <img src="assets/PHOTO-2026-07-27-11-01-10 2.webp" alt="Suzuki Ertiga" loading="lazy" onload="imgLoaded(this)" onerror="imgFailed(this)">
+          </div>
+          <div>
+            <h3 class="car-slide-title" data-i18n="carTab0">Suzuki Ertiga</h3>
+            <p class="car-slide-desc" data-i18n="vehicleSub">A Suzuki Ertiga, maintained and sanitized before every trip.</p>
+            <ul class="vehicle-feats">
+              <li data-i18n="feat1">Seats up to 6 passengers comfortably, with luggage space</li>
+              <li data-i18n="feat2">Great Air Conditioning, cleanliness top-notch.</li>
+              <li data-i18n="feat4">Serviced regularly, insurance up to date</li>
+            </ul>
+          </div>
+        </div>
       </div>
-      <ul class="vehicle-feats">
-        <li data-i18n="feat1">Seats up to 6 passengers comfortably, with luggage space</li>
-        <li data-i18n="feat2">Great Air Conditioning, cleanliness top-notch.</li>
-        <li data-i18n="feat4">Serviced regulary, insurance up to date</li>
-      </ul>
+
+      <div class="car-slide" data-car-slide="1">
+        <div class="car-hero-grid">
+          <div class="car-hero-photo photo-slot">
+            <div class="ph-fallback">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 22h20M6 22V11l6-7 6 7v11M9 22v-6h6v6"/></svg>
+              <span>Add assets/dzire.webp</span>
+            </div>
+            <img src="assets/dzire.webp" alt="Suzuki Dzire" loading="lazy">
+          </div>
+          <div>
+            <h3 class="car-slide-title" data-i18n="carTab1">Suzuki Dzire</h3>
+            <p class="car-slide-desc" data-i18n="car1Desc">A Suzuki Dzire, our compact sedan for quick city runs and airport transfers.</p>
+            <ul class="vehicle-feats">
+              <li data-i18n="car1Feat1">Seats up to 4 passengers comfortably, with boot space for luggage</li>
+              <li data-i18n="car1Feat2">Fuel-efficient and easy to manoeuvre in city traffic</li>
+              <li data-i18n="car1Feat3">Serviced regularly, insurance up to date</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="car-slide" data-car-slide="2">
+        <div class="car-hero-grid">
+          <div class="car-hero-photo photo-slot">
+            <div class="ph-fallback">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 22h20M6 22V11l6-7 6 7v11M9 22v-6h6v6"/></svg>
+              <span>Add assets/innova-crysta.webp</span>
+            </div>
+            <img src="assets/innova-crysta.webp" alt="Innova Crysta" loading="lazy">
+          </div>
+          <div>
+            <h3 class="car-slide-title" data-i18n="carTab2">Innova Crysta</h3>
+            <p class="car-slide-desc" data-i18n="car2Desc">An Innova Crysta, ideal for families and longer outstation trips.</p>
+            <ul class="vehicle-feats">
+              <li data-i18n="car2Feat1">Seats up to 7 passengers with extra legroom</li>
+              <li data-i18n="car2Feat2">Smooth ride on long highway journeys, ample luggage space</li>
+              <li data-i18n="car2Feat3">Serviced regularly, insurance up to date</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="car-slide" data-car-slide="3">
+        <div class="car-hero-grid">
+          <div class="car-hero-photo photo-slot">
+            <div class="ph-fallback">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 22h20M6 22V11l6-7 6 7v11M9 22v-6h6v6"/></svg>
+              <span>Add assets/tempo-traveller.webp</span>
+            </div>
+            <img src="assets/tempo-traveller.webp" alt="Tempo Traveller" loading="lazy">
+          </div>
+          <div>
+            <h3 class="car-slide-title" data-i18n="carTab3">Tempo Traveller</h3>
+            <p class="car-slide-desc" data-i18n="car3Desc">A Tempo Traveller for group tours, weddings, and corporate outings.</p>
+            <ul class="vehicle-feats">
+              <li data-i18n="car3Feat1">Seats up to 12–17 passengers with pushback seating</li>
+              <li data-i18n="car3Feat2">Spacious luggage area, great for multi-day group trips</li>
+              <li data-i18n="car3Feat3">Serviced regularly, insurance up to date</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="car-slider-controls">
+      <button class="car-nav car-prev" type="button" data-car-nav="prev" aria-label="Previous vehicle">&#8249;</button>
+      <div class="car-dots">
+        <button class="car-dot active" type="button" data-car-dot="0" aria-label="Show Suzuki Ertiga"></button>
+        <button class="car-dot" type="button" data-car-dot="1" aria-label="Show Suzuki Dzire"></button>
+        <button class="car-dot" type="button" data-car-dot="2" aria-label="Show Innova Crysta"></button>
+        <button class="car-dot" type="button" data-car-dot="3" aria-label="Show Tempo Traveller"></button>
+      </div>
+      <button class="car-nav car-next" type="button" data-car-nav="next" aria-label="Next vehicle">&#8250;</button>
     </div>
   </div>
 </section>
